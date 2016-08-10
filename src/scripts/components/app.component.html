@@ -1,0 +1,95 @@
+<div class="container" style="margin-bottom: 15px">
+    <heading-bcomponent [title]="'Contents'" [size]="4"></heading-bcomponent>
+    <ul style="list-style: none;">
+        <li><strong>A</strong></li>
+        <li><link-bcomponent [text]="'Alert'" [link]="'#alert'"></link-bcomponent></li>
+        <li><strong>B</strong></li>
+        <li><link-bcomponent [text]="'Badge'" [link]="'#badge'"></link-bcomponent></li>
+        <li><link-bcomponent [text]="'Breadcrumb'" [link]="'#breadcrumb'"></link-bcomponent></li>"
+        <li><link-bcomponent [text]="'Button'" [link]="'#button'"></link-bcomponent></li>
+        <li><strong>D</strong></li>
+        <li><link-bcomponent [text]="'Dropdown'" [link]="'#dropdown'"></link-bcomponent></li>
+        <li><strong>H</strong></li>
+        <li><link-bcomponent [text]="'Heading'" [link]="'#heading'"></link-bcomponent></li>
+        <li><strong>J</strong></li>
+        <li><link-bcomponent [text]="'Jumbotron'" [link]="'#jumbotron'"></link-bcomponent></li>
+        <li><strong>L</strong></li>
+        <li><link-bcomponent [text]="'Label'" [link]="'#label'"></link-bcomponent></li>
+        <li><link-bcomponent [text]="'Link'" [link]="'#link'"></link-bcomponent></li>
+        <li><strong>P</strong></li>
+        <li><link-bcomponent [text]="'Panel'" [link]="'#panel'"></link-bcomponent></li>
+        <li><link-bcomponent [text]="'Progress Bar'" [link]="'#progressbar'"></link-bcomponent>
+        <li><strong>T</strong></li>
+        <li><link-bcomponent [text]="'Textbox'" [link]="'#textbox'"></link-bcomponent></li>
+    </ul>
+
+    <!--Alert-->
+    <heading-bcomponent [id]="'alert'" [size]="3" [title]="'Alert'"></heading-bcomponent>
+    <alert-bcomponent [text]="'<strong>WOW</strong> Much alert. So amaze.'" [type]="'danger'"></alert-bcomponent>
+    <alert-bcomponent [text]="'Dismissible baby'" [type]="'default'" [dismissible]="true"></alert-bcomponent>
+
+    <!--Badge-->
+    <heading-bcomponent [id]="'badge'" [size]="3" [title]="'Badge'"></heading-bcomponent>
+    <div><badge-bcomponent [value]="'Hello World'"></badge-bcomponent></div>
+    <div><badge-bcomponent #badge [value]="3"></badge-bcomponent></div>
+    <button-bcomponent [text]="'-'" [click]="badge.decrement" [type]="'danger'"></button-bcomponent>&nbsp;
+    <button-bcomponent [text]="'+'" [click]="badge.increment" [type]="'success'"></button-bcomponent>
+
+    <!--Breadcrumb-->
+    <heading-bcomponent [id]="'breadcrumb'" [size]="3" [title]="'Breadcrumb'"></heading-bcomponent>
+    <div><breadcrumb-bcomponent [items]="breadcrumbItems" [active]="'Amazing'"></breadcrumb-component></div>
+    <div><breadcrumb-bcomponent [items]="breadcrumbItems"></breadcrumb-component></div>
+
+    <!--Button-->
+    <heading-bcomponent [id]="'button'" [size]="3" [title]="'Button'"></heading-bcomponent>
+    <button-bcomponent [text]="'Click me baby'" [click]="btnClickDemo" [type]="'primary'"></button-bcomponent>
+
+    <!--Dropdown-->
+    <heading-bcomponent [id]="'dropdown'" [size]="3" [title]="'Dropdown'"></heading-bcomponent>
+    <dropdown-bcomponent></dropdown-bcomponent>
+
+    <!--Heading-->
+    <heading-bcomponent [id]="'heading'" [size]="3" [title]="'Heading'"></heading-bcomponent>
+    <heading-bcomponent [size]="4" [title]="'Heading within heading..'" [subtitle]="'Amazing'"></heading-bcomponent>
+
+    <!--Jumbotron-->
+    <heading-bcomponent [id]="'jumbotron'" [size]="3" [title]="'Jumbotron'"></heading-bcomponent>
+    <jumbotron-bcomponent 
+        [classes]="'my-jumbotron-class'" 
+        [title]="'Title'" 
+        [subtitle]="'sub-title'" 
+        [body]="'The body'">
+    </jumbotron-bcomponent>
+
+    <!--Label-->
+    <heading-bcomponent [id]="'label'" [size]="3" [title]="'Label'"></heading-bcomponent>
+    <label-bcomponent [text]="'Wow such label'" [type]="'info'"></label-bcomponent>
+    <h2>Amazing <label-bcomponent [text]="'Great label'" [type]="'danger'"></label-bcomponent></h2>
+    <label-bcomponent [text]="'No Bueno Labelo'" [type]=""></label-bcomponent>
+
+    <!--Link-->
+    <heading-bcomponent [id]="'link'" [size]="3" [title]="'Link'"></heading-bcomponent>
+    <link-bcomponent [text]="'Wow much link'" [link]="'#'"></link-bcomponent>
+
+    <!--Panel-->
+    <heading-bcomponent [id]="'panel'" [size]="3" [title]="'Panel'"></heading-bcomponent>
+    <panel-bcomponent [header]="'<h3>Title</h3>'" [body]="'Wow crazy amazing text in body. So cool.'" [footer]="'Micky 4 prez'" [type]="'warning'"></panel-bcomponent>
+    <panel-bcomponent [body]="'No header :('" [footer]="'Footer'" [type]="'info'"></panel-bcomponent>
+    <panel-bcomponent [header]="'Header'" [body]="'No footer :('" [type]="'danger'"></panel-bcomponent>
+
+    <!--Progress Bar-->
+    <heading-bcomponent [id]="'progressbar'" [size]="3" [title]="'Progress Bar'"></heading-bcomponent>
+    <progressbar-bcomponent [value]="250" [minValue]="0" [maxValue]="1000" [display]="'%'" [displayPercent]="true" [striped]="true" [animated]="true" [type]="'info'"></progressbar-bcomponent>
+    <progressbar-bcomponent [value]="682" [minValue]="0" [maxValue]="1000" [display]="''" [displayPercent]="false" [striped]="false" [type]="'danger'"></progressbar-bcomponent>
+
+    <!--Textbox-->
+    <heading-bcomponent [id]="'textbox'" [size]="3" [title]="'Textbox'"></heading-bcomponent>
+    <p>Important Information (model): {{txtDemo.model}}</p>
+    <textbox-bcomponent #txtDemo [placeholder]="'Wow Amazing (small)Placeholder'" [model]="txtModel" [size]="'sm'" [frontText]="'@'" [backText]="'Go'" [backClick]="btnBackDemo" [backType]="'success'"></textbox-bcomponent><br/>
+    <textbox-bcomponent [placeholder]="'Wow, another(large) one!'" [model]="txtDemo.model" [size]="'lg'" [frontText]="'Go'" [backText]="'.00'" [frontClick]="btnFrontDemo" [backType]="'default'"></textbox-bcomponent><br/>
+    <textbox-bcomponent [placeholder]="'Wow, another one!'" [model]="txtDemo.model" [frontText]="'@'"></textbox-bcomponent><br/>
+    <textbox-bcomponent [placeholder]="'Wow, another one!'" [model]="txtDemo.model" [backText]="'.00'"></textbox-bcomponent>
+</div>
+<div style="margin: 15px">
+    <link-bcomponent [text]="'<h3><b>Top</b></h3>'" [link]="'#'" [styles]="'display: block;text-align: center;'"></link-bcomponent>
+</div>
