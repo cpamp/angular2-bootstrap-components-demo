@@ -3,7 +3,7 @@ import {AlertBComponent} from './alert/alert.bcomponent';
 import {BadgeBComponent} from './badge/badge.bcomponent';
 import {ButtonBComponent} from './button/button.bcomponent';
 import {BreadcrumbBComponent, BreadcrumbItem} from './breadcrumb/breadcrumb.bcomponent';
-import {DropdownBComponent} from './dropdown/dropdown.bcomponent';
+import {DropdownBComponent, DropdownItem} from './dropdown/dropdown.bcomponent';
 import {HeadingBComponent} from './heading/heading.bcomponent';
 import {JumbotronBComponent} from './jumbotron/jumbotron.bcomponent';
 import {LabelBComponent} from './label/label.bcomponent';
@@ -47,4 +47,13 @@ export class AppComponent {
     public btnBackDemo = () => {
         alert("Back!");
     }
+
+    public dropdownItems = [
+        new DropdownItem("default", "First", "#dropdown"),
+        new DropdownItem("default", "<b>Bold</b>", "#dropdown"),
+        new DropdownItem("separator", "", "#dropdown"),
+        new DropdownItem("default", "Yup", "#dropdown"),
+        new DropdownItem("header", "Header", "#dropdown"),
+        new DropdownItem("default", "after header", "#dropdown")
+    ]
 }
