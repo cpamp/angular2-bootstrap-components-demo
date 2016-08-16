@@ -10,6 +10,7 @@ import {LabelBComponent} from './label/label.bcomponent';
 import {LinkBComponent} from './link/link.bcomponent';
 import {PanelBComponent} from './panel/panel.bcomponent';
 import {ProgressbarBComponent} from './progressbar/progressbar.bcomponent';
+import {TableBComponent} from './table/table.bcomponent';
 import {TextboxBComponent} from './textbox/textbox.bcomponent';
 
 @Component({
@@ -27,6 +28,7 @@ import {TextboxBComponent} from './textbox/textbox.bcomponent';
         LinkBComponent,
         PanelBComponent,
         ProgressbarBComponent,
+        TableBComponent,
         TextboxBComponent
     ],
 })
@@ -55,5 +57,32 @@ export class AppComponent {
         new DropdownItem("default", "Yup", "#dropdown"),
         new DropdownItem("header", "Header", "#dropdown"),
         new DropdownItem("default", "after header", "#dropdown")
+    ]
+
+    public headers = ['First', 'Second', 'Third'];
+    public rows = [
+        ['1', '2', '3'],
+        ['2', '3', '4']
+    ]
+
+    public objectTable = [
+        {
+            First: "Joe",
+            Last: "Doe",
+            Position: "Engineer",
+            Nickname: "Joey"
+        },
+        {
+            First: "Jane",
+            Last: "Some-Last-Name",
+            Position: "VIP",
+            Nickname: "J"
+        },
+        {
+            First: "Scott",
+            Last: "Williams",
+            Position: "President",
+            Nickname: "Scotty-boy"
+        }
     ]
 }

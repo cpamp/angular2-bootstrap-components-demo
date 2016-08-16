@@ -82,6 +82,11 @@
     <progressbar-bcomponent [value]="250" [minValue]="0" [maxValue]="1000" [display]="'%'" [displayPercent]="true" [striped]="true" [animated]="true" [type]="'info'"></progressbar-bcomponent>
     <progressbar-bcomponent [value]="682" [minValue]="0" [maxValue]="1000" [display]="''" [displayPercent]="false" [striped]="false" [type]="'danger'"></progressbar-bcomponent>
 
+    <!-- Table -->
+    <heading-bcomponent [id]="'table'" [size]="3" [title]="'Table'"></heading-bcomponent>
+    <table-bcomponent [headers]="headers" [items]="rows"></table-bcomponent>
+    <table-bcomponent [items]="objectTable"></table-bcomponent>
+
     <!--Textbox-->
     <heading-bcomponent [id]="'textbox'" [size]="3" [title]="'Textbox'"></heading-bcomponent>
     <p>Important Information (model): {{txtDemo.model}}</p>
