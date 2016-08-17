@@ -11,6 +11,8 @@
         <li><link-bcomponent [text]="'Dropdown'" [link]="'#dropdown'"></link-bcomponent></li>
         <li><strong>H</strong></li>
         <li><link-bcomponent [text]="'Heading'" [link]="'#heading'"></link-bcomponent></li>
+        <li><strong>I</strong></li>
+        <li><link-bcomponent [text]="'Input Group'" [link]="'#input-group'"></link-bcomponent></li>
         <li><strong>J</strong></li>
         <li><link-bcomponent [text]="'Jumbotron'" [link]="'#jumbotron'"></link-bcomponent></li>
         <li><strong>L</strong></li>
@@ -20,7 +22,7 @@
         <li><link-bcomponent [text]="'Panel'" [link]="'#panel'"></link-bcomponent></li>
         <li><link-bcomponent [text]="'Progress Bar'" [link]="'#progressbar'"></link-bcomponent>
         <li><strong>T</strong></li>
-        <li><link-bcomponent [text]="'Textbox'" [link]="'#textbox'"></link-bcomponent></li>
+        
     </ul>
 
     <!--Alert-->
@@ -51,6 +53,14 @@
     <!--Heading-->
     <heading-bcomponent [id]="'heading'" [size]="3" [title]="'Heading'"></heading-bcomponent>
     <heading-bcomponent [size]="4" [title]="'Heading within heading..'" [subtitle]="'Amazing'"></heading-bcomponent>
+
+    <!--Input Group-->
+    <heading-bcomponent [id]="'input-group'" [size]="3" [title]="'Input Group'"></heading-bcomponent>
+    <p>Important Information (model): {{txtDemo.model}}</p>
+    <input-group-bcomponent #txtDemo [placeholder]="'Wow Amazing (small)Placeholder'" [model]="txtModel" [size]="'sm'" [frontText]="'@'" [backText]="'Go'" [backClick]="btnBackDemo" [backType]="'success'"></input-group-bcomponent><br/>
+    <input-group-bcomponent [placeholder]="'Wow, another(large) one!'" [model]="txtDemo.model" [size]="'lg'" [frontText]="'Go'" [backText]="'.00'" [frontClick]="btnFrontDemo" [backType]="'default'"></input-group-bcomponent><br/>
+    <input-group-bcomponent [placeholder]="'Wow, another one!'" [model]="txtDemo.model" [frontText]="'@'"></input-group-bcomponent><br/>
+    <input-group-bcomponent [placeholder]="'Wow, another one!'" [model]="txtDemo.model" [backText]="'.00'"></input-group-bcomponent>
 
     <!--Jumbotron-->
     <heading-bcomponent [id]="'jumbotron'" [size]="3" [title]="'Jumbotron'"></heading-bcomponent>
@@ -87,13 +97,6 @@
     <table-bcomponent [headers]="headers" [items]="rows"></table-bcomponent>
     <table-bcomponent [items]="objectTable"></table-bcomponent>
 
-    <!--Textbox-->
-    <heading-bcomponent [id]="'textbox'" [size]="3" [title]="'Textbox'"></heading-bcomponent>
-    <p>Important Information (model): {{txtDemo.model}}</p>
-    <textbox-bcomponent #txtDemo [placeholder]="'Wow Amazing (small)Placeholder'" [model]="txtModel" [size]="'sm'" [frontText]="'@'" [backText]="'Go'" [backClick]="btnBackDemo" [backType]="'success'"></textbox-bcomponent><br/>
-    <textbox-bcomponent [placeholder]="'Wow, another(large) one!'" [model]="txtDemo.model" [size]="'lg'" [frontText]="'Go'" [backText]="'.00'" [frontClick]="btnFrontDemo" [backType]="'default'"></textbox-bcomponent><br/>
-    <textbox-bcomponent [placeholder]="'Wow, another one!'" [model]="txtDemo.model" [frontText]="'@'"></textbox-bcomponent><br/>
-    <textbox-bcomponent [placeholder]="'Wow, another one!'" [model]="txtDemo.model" [backText]="'.00'"></textbox-bcomponent>
 </div>
 <div style="margin: 15px">
     <link-bcomponent [text]="'<h3><b>Top</b></h3>'" [link]="'#'" [styles]="'display: block;text-align: center;'"></link-bcomponent>

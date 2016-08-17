@@ -5,13 +5,13 @@ import {ButtonBComponent} from './button/button.bcomponent';
 import {BreadcrumbBComponent, BreadcrumbItem} from './breadcrumb/breadcrumb.bcomponent';
 import {DropdownBComponent, DropdownItem} from './dropdown/dropdown.bcomponent';
 import {HeadingBComponent} from './heading/heading.bcomponent';
+import {InputGroupBComponent} from './input-group/input-group.bcomponent';
 import {JumbotronBComponent} from './jumbotron/jumbotron.bcomponent';
 import {LabelBComponent} from './label/label.bcomponent';
 import {LinkBComponent} from './link/link.bcomponent';
 import {PanelBComponent} from './panel/panel.bcomponent';
 import {ProgressbarBComponent} from './progressbar/progressbar.bcomponent';
 import {TableBComponent} from './table/table.bcomponent';
-import {TextboxBComponent} from './textbox/textbox.bcomponent';
 
 @Component({
     selector: 'app-component',
@@ -23,13 +23,13 @@ import {TextboxBComponent} from './textbox/textbox.bcomponent';
         BreadcrumbBComponent,
         DropdownBComponent,
         HeadingBComponent,
+        InputGroupBComponent,
         JumbotronBComponent,
         LabelBComponent,
         LinkBComponent,
         PanelBComponent,
         ProgressbarBComponent,
-        TableBComponent,
-        TextboxBComponent
+        TableBComponent
     ],
 })
 export class AppComponent {
