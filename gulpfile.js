@@ -7,7 +7,8 @@ var paths = {
     source: {
         root: src,
         scripts: src + '/scripts',
-        stylesheets: src + '/stylesheets'
+        stylesheets: src + '/stylesheets',
+        images: src + '/images'
     },
     dev: {
         root: dev,
@@ -17,14 +18,16 @@ var paths = {
         angular: dev + '/lib/angular',
         rxjs: dev + '/lib/rxjs',
         webapi: dev + '/lib/webapi',
-        scriptsTranspiled: dev + '/scripts/transpiled'
+        scriptsTranspiled: dev + '/scripts/transpiled',
+        images: dev + '/images'
     },
     dist: {
         root: dist,
         scripts: dist + '/scripts',
         stylesheets: dist + '/stylesheets',
         dependencies: dist + '/lib',
-        angular: dist + '/lib/angular'
+        angular: dist + '/lib/angular',
+        images: dist + '/images'
     }
 }
 
@@ -48,7 +51,8 @@ var files = {
         index: paths.src + '/' + out.index,
         typescripts: [paths.source.scripts + '/**/*.ts','typings/**/*.ts'],
         stylesheets: [paths.source.stylesheets + '/**/*.css'],
-        systemjsConfig: paths.source.scripts + '/systemjs.config.js'
+        systemjsConfig: paths.source.scripts + '/systemjs.config.js',
+        images: paths.source.images + '/**/*'
     },
     dev: {
         scripts: paths.dev.scripts + '/*.js',
@@ -146,6 +150,20 @@ gulp.task('fonts:dev', fontsDev);
 
 function fontsDist() { return copyFont(paths.dist.dependencies); }
 gulp.task('fonts:dist', fontsDist);
+
+/**
+ * Images
+ */
+function copyImages(dest) {
+    return gulp.src(files.src.images)
+        .pipe(gulp.dest(dest));
+}
+
+function imagesDev() { return copyImages(paths.dev.images); }
+gulp.task('images:dev', imagesDev);
+
+function imagesDist() { return copyImages(paths.dist.images); }
+gulp.task('images:dist', imagesDist);
 
 /**
  * Transpiling
@@ -252,6 +270,7 @@ gulp.task('build:dev', [
     'dependencies:css:dev',
     'bundle:dev',
     'fonts:dev',
+    'images:dev',
     'tsc:dev',
     'bundle:dev',
     'uglify:css:dev',
@@ -263,6 +282,7 @@ gulp.task('build:dist', [
     'dependencies:css:dist',
     'bundle:dev',
     'fonts:dist',
+    'images:dist',
     'tsc:dev',
     'uglify:js:dist',
     'uglify:css:dist',

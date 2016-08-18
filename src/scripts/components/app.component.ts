@@ -12,6 +12,7 @@ import {LinkBComponent} from './link/link.bcomponent';
 import {PanelBComponent} from './panel/panel.bcomponent';
 import {ProgressbarBComponent} from './progressbar/progressbar.bcomponent';
 import {TableBComponent} from './table/table.bcomponent';
+import {ThumbnailBComponent} from './thumbnail/thumbnail.bcomponent';
 
 @Component({
     selector: 'app-component',
@@ -29,7 +30,8 @@ import {TableBComponent} from './table/table.bcomponent';
         LinkBComponent,
         PanelBComponent,
         ProgressbarBComponent,
-        TableBComponent
+        TableBComponent,
+        ThumbnailBComponent
     ],
 })
 export class AppComponent {

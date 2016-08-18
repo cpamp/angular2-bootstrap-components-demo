@@ -5,7 +5,7 @@
         <li><link-bcomponent [text]="'Alert'" [link]="'#alert'"></link-bcomponent></li>
         <li><strong>B</strong></li>
         <li><link-bcomponent [text]="'Badge'" [link]="'#badge'"></link-bcomponent></li>
-        <li><link-bcomponent [text]="'Breadcrumb'" [link]="'#breadcrumb'"></link-bcomponent></li>"
+        <li><link-bcomponent [text]="'Breadcrumb'" [link]="'#breadcrumb'"></link-bcomponent></li>
         <li><link-bcomponent [text]="'Button'" [link]="'#button'"></link-bcomponent></li>
         <li><strong>D</strong></li>
         <li><link-bcomponent [text]="'Dropdown'" [link]="'#dropdown'"></link-bcomponent></li>
@@ -22,6 +22,7 @@
         <li><link-bcomponent [text]="'Panel'" [link]="'#panel'"></link-bcomponent></li>
         <li><link-bcomponent [text]="'Progress Bar'" [link]="'#progressbar'"></link-bcomponent>
         <li><strong>T</strong></li>
+        <li><link-bcomponent [text]="'Thumbnail'" [link]="'#thumbnail'"></link-bcomponent>
         
     </ul>
 
@@ -96,6 +97,13 @@
     <heading-bcomponent [id]="'table'" [size]="3" [title]="'Table'"></heading-bcomponent>
     <table-bcomponent [headers]="headers" [items]="rows"></table-bcomponent>
     <table-bcomponent [items]="objectTable"></table-bcomponent>
+
+    <!-- Thumbnail -->
+    <heading-bcomponent [id]="'thumbnail'" [size]="3" [title]="'Thumbnail'"></heading-bcomponent>
+    <div class="row">
+        <thumbnail-bcomponent [classes]="'col-md-2'" [styles]="'margin: 10px;'" [header]="'Lion'" [body]="'A lion.'" [src]="'/../images/lion.jpg'"></thumbnail-bcomponent>
+        <thumbnail-bcomponent [classes]="'col-md-2'" [styles]="'margin: 10px;'" [header]="'Bear'" [body]="'A big bad bear.'" [src]="'/../images/bear.jpg'"></thumbnail-bcomponent>
+    </div>
 
 </div>
 <div style="margin: 15px">
