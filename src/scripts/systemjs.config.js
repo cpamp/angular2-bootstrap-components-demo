@@ -8,14 +8,14 @@
     'app':                        'scripts/transpiled', // 'dist',
     '@angular':                   'node_modules/@angular',
     'rxjs':                       'node_modules/rxjs',
-    'angular2-bootstrap-components':                'node_modules/angular2-bootstrap-components'
+    'ng-bcomponents':                'node_modules/ng-bcomponents'
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
     'app':                              { main: 'main.js',  defaultExtension: 'js' },
     'rxjs':                             { defaultExtension: 'js' },
     '@angular':                         { defaultExtension: 'js' },
-    'angular2-bootstrap-components':    { main: 'bcomponents.js', defaultExtension: 'js' }
+    'ng-bcomponents':                   { main: 'index.js', defaultExtension: 'js' }
   };
   var ngPackageNames = [
     'common',
