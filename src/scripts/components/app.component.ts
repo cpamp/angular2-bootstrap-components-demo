@@ -1,6 +1,7 @@
+// <reference path="../../node_modules/angular2-bootstrap-components/bcomponents.d.ts" />
 import {Component} from '@angular/core';
-import {BreadcrumbItem} from 'bcomponents';
-import {DropdownItem} from 'bcomponents';
+import {BreadcrumbItem} from 'ng-bcomponents';
+import {DropdownItem} from 'ng-bcomponents';
 
 @Component({
     selector: 'app-component',

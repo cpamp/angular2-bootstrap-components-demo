@@ -4,21 +4,21 @@ import {FormsModule} from '@angular/forms';
 
 
 import {AppComponent} from './components/app.component';
-import {AlertBComponent} from 'bcomponents';
-import {BadgeBComponent} from 'bcomponents';
-import {ButtonBComponent} from 'bcomponents';
-import {BreadcrumbBComponent, BreadcrumbItem} from 'bcomponents';
-import {DropdownBComponent} from 'bcomponents';
-import {HeadingBComponent} from 'bcomponents';
-import {InputGroupBComponent} from 'bcomponents';
-import {JumbotronBComponent} from 'bcomponents';
-import {LabelBComponent} from 'bcomponents';
-import {LinkBComponent} from 'bcomponents';
-import {PanelBComponent} from 'bcomponents';
-import {ProgressbarBComponent} from 'bcomponents';
-import {TableBComponent} from 'bcomponents';
-import {ThumbnailBComponent} from 'bcomponents';
-import {WellBComponent} from 'bcomponents';
+import {AlertBComponent} from 'ng-bcomponents';
+import {BadgeBComponent} from 'ng-bcomponents';
+import {ButtonBComponent} from 'ng-bcomponents';
+import {BreadcrumbBComponent, BreadcrumbItem} from 'ng-bcomponents';
+import {DropdownBComponent} from 'ng-bcomponents';
+import {HeadingBComponent} from 'ng-bcomponents';
+import {InputGroupBComponent} from 'ng-bcomponents';
+import {JumbotronBComponent} from 'ng-bcomponents';
+import {LabelBComponent} from 'ng-bcomponents';
+import {LinkBComponent} from 'ng-bcomponents';
+import {PanelBComponent} from 'ng-bcomponents';
+import {ProgressbarBComponent} from 'ng-bcomponents';
+import {TableBComponent} from 'ng-bcomponents';
+import {ThumbnailBComponent} from 'ng-bcomponents';
+import {WellBComponent} from 'ng-bcomponents';
 
 @NgModule({
     declarations: [
