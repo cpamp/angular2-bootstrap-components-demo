@@ -1,38 +1,10 @@
 import {Component} from '@angular/core';
-import {AlertBComponent} from './alert/alert.bcomponent';
-import {BadgeBComponent} from './badge/badge.bcomponent';
-import {ButtonBComponent} from './button/button.bcomponent';
-import {BreadcrumbBComponent, BreadcrumbItem} from './breadcrumb/breadcrumb.bcomponent';
-import {DropdownBComponent, DropdownItem} from './dropdown/dropdown.bcomponent';
-import {HeadingBComponent} from './heading/heading.bcomponent';
-import {InputGroupBComponent} from './input-group/input-group.bcomponent';
-import {JumbotronBComponent} from './jumbotron/jumbotron.bcomponent';
-import {LabelBComponent} from './label/label.bcomponent';
-import {LinkBComponent} from './link/link.bcomponent';
-import {PanelBComponent} from './panel/panel.bcomponent';
-import {ProgressbarBComponent} from './progressbar/progressbar.bcomponent';
-import {TableBComponent} from './table/table.bcomponent';
-import {ThumbnailBComponent} from './thumbnail/thumbnail.bcomponent';
+import {BreadcrumbItem} from 'bcomponents';
+import {DropdownItem} from 'bcomponents';
 
 @Component({
     selector: 'app-component',
-    templateUrl: 'app.component.html',
-    directives: [
-        AlertBComponent,
-        BadgeBComponent,
-        ButtonBComponent,
-        BreadcrumbBComponent,
-        DropdownBComponent,
-        HeadingBComponent,
-        InputGroupBComponent,
-        JumbotronBComponent,
-        LabelBComponent,
-        LinkBComponent,
-        PanelBComponent,
-        ProgressbarBComponent,
-        TableBComponent,
-        ThumbnailBComponent
-    ],
+    templateUrl: 'app.component.html'
 })
 export class AppComponent {
     public breadcrumbItems: BreadcrumbItem[] = [

@@ -23,7 +23,8 @@
         <li><link-bcomponent [text]="'Progress Bar'" [link]="'#progressbar'"></link-bcomponent>
         <li><strong>T</strong></li>
         <li><link-bcomponent [text]="'Thumbnail'" [link]="'#thumbnail'"></link-bcomponent>
-        
+        <li><strong>W</strong></li>
+        <li><link-bcomponent [text]="'Well'" [link]="'#well'"></link-bcomponent>
     </ul>
 
     <!--Alert-->
@@ -47,7 +48,7 @@
     <heading-bcomponent [id]="'button'" [size]="3" [title]="'Button'"></heading-bcomponent>
     <button-bcomponent [text]="'Click me baby'" [click]="btnClickDemo" [type]="'primary'"></button-bcomponent>
 
-    <!--Dropdown-->
+    <!--Dropdown -->
     <heading-bcomponent [id]="'dropdown'" [size]="3" [title]="'Dropdown'"></heading-bcomponent>
     <dropdown-bcomponent [title]="'My Dropdown'" [items]="dropdownItems"></dropdown-bcomponent>
 
@@ -104,6 +105,10 @@
         <thumbnail-bcomponent [classes]="'col-md-2'" [styles]="'margin: 10px;'" [header]="'Lion'" [body]="'A lion.'" [src]="'/../images/lion.jpg'"></thumbnail-bcomponent>
         <thumbnail-bcomponent [classes]="'col-md-2'" [styles]="'margin: 10px;'" [header]="'Bear'" [body]="'A big bad bear.'" [src]="'/../images/bear.jpg'"></thumbnail-bcomponent>
     </div>
+
+    <!-- Well -->
+    <heading-bcomponent [id]="'well'" [size]="3" [title]="'Well'"></heading-bcomponent>
+    <well-bcomponent [size]="'lg'" [text]="'Well well well...'"></well-bcomponent>
 
 </div>
 <div style="margin: 15px">
