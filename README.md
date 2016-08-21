@@ -3,4 +3,4 @@ A project demoing [angular2-bootstrap-components](https://github.com/cpamp21/ang
 
 Clone repo, navigate to folder and use the console command `npm start`  
 
-View a live demo here: [bcomponentdemo.clintpamperin.com](bcomponentdemo.clintpamperin.com)
+View a live demo here: [bcomponentdemo.clintpamperin.com](http://bcomponentdemo.clintpamperin.com)
