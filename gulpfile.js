@@ -201,7 +201,7 @@ gulp.task('bundle:dev', ['tsc:dev'], bundleDev);
  */
 function uglifyJs(src, dest) {
     return gulp.src(src)
-        .pipe(uglify())
+        .pipe(uglify({mangle: false}))
         .pipe(gulp.dest(dest));
 }
 
