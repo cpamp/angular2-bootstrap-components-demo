@@ -2,6 +2,8 @@
 import {Component} from '@angular/core';
 import {BreadcrumbItem} from 'ng-bcomponents';
 import {DropdownItem} from 'ng-bcomponents';
+import {ListGroupItem} from 'ng-bcomponents';
+import {BadgeBComponent} from 'ng-bcomponents';
 
 @Component({
     selector: 'app-component',
@@ -32,13 +34,13 @@ export class AppComponent {
         new DropdownItem("default", "Yup", "#dropdown"),
         new DropdownItem("header", "Header", "#dropdown"),
         new DropdownItem("default", "after header", "#dropdown")
-    ]
+    ];
 
     public headers = ['First', 'Second', 'Third'];
     public rows = [
         ['1', '2', '3'],
         ['2', '3', '4']
-    ]
+    ];
 
     public objectTable = [
         {
@@ -59,5 +61,21 @@ export class AppComponent {
             Position: "President",
             Nickname: "Scotty-boy"
         }
-    ]
+    ];
+
+    public badge = (): BadgeBComponent => {
+        var badge = new BadgeBComponent();
+        badge.value = 3;
+        return badge;
+    }
+    public listGroup = [
+        new ListGroupItem("First", this.badge()),
+        new ListGroupItem("Second"),
+        new ListGroupItem("Third")
+    ];
+    public listGroupLinked = [
+        new ListGroupItem("First", this.badge(), "#", true),
+        new ListGroupItem("Second", null, "#"),
+        new ListGroupItem("Last", null, "#")
+    ];
 }

@@ -83,6 +83,11 @@
     <heading-bcomponent [id]="'link'" [size]="3" [title]="'Link'"></heading-bcomponent>
     <link-bcomponent [text]="'Wow much link'" [link]="'#'"></link-bcomponent>
 
+    <!-- List Group -->
+    <heading-bcomponent [id]="'list-group'" [size]="3" [title]="'List Group'"></heading-bcomponent>
+    <list-group-bcomponent [items]="listGroup"></list-group-bcomponent>
+    <list-group-bcomponent [items]="listGroupLinked" [linked]="true"></list-group-bcomponent>
+
     <!--Panel-->
     <heading-bcomponent [id]="'panel'" [size]="3" [title]="'Panel'"></heading-bcomponent>
     <panel-bcomponent [header]="'<h3>Title</h3>'" [body]="'Wow crazy amazing text in body. So cool.'" [footer]="'Micky 4 prez'" [type]="'warning'"></panel-bcomponent>
