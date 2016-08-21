@@ -1,18 +1,20 @@
 // <reference path="../../node_modules/angular2-bootstrap-components/bcomponents.d.ts" />
 import {Component} from '@angular/core';
-import {BreadcrumbItem} from 'ng-bcomponents';
 import {DropdownItem} from 'ng-bcomponents';
 import {ListGroupItem} from 'ng-bcomponents';
 import {BadgeBComponent} from 'ng-bcomponents';
+import {MediaAlignment} from 'ng-bcomponents';
+import {LinkBComponent} from 'ng-bcomponents';
+import {ButtonBComponent} from 'ng-bcomponents';
 
 @Component({
     selector: 'app-component',
     templateUrl: 'app.component.html'
 })
 export class AppComponent {
-    public breadcrumbItems: BreadcrumbItem[] = [
-        new BreadcrumbItem("#home", "Home"),
-        new BreadcrumbItem("#bcomponents", "BComponents")
+    public breadcrumbItems: LinkBComponent[] = [
+        new LinkBComponent().Initialize("Home","#home"),
+        new LinkBComponent().Initialize("BComponents", "#bcomponents")
     ];
 
     public btnClickDemo = () => {
@@ -26,6 +28,8 @@ export class AppComponent {
     public btnBackDemo = () => {
         alert("Back!");
     }
+    public btnFront = new ButtonBComponent().Initialize("FrontGo", "success", this.btnFrontDemo);
+    public btnBack = new ButtonBComponent().Initialize("BackGo", "danger", this.btnBackDemo);
 
     public dropdownItems = [
         new DropdownItem("default", "First", "#dropdown"),
@@ -63,19 +67,18 @@ export class AppComponent {
         }
     ];
 
-    public badge = (): BadgeBComponent => {
-        var badge = new BadgeBComponent();
-        badge.value = 3;
-        return badge;
-    }
+    public badge = new BadgeBComponent();
     public listGroup = [
-        new ListGroupItem("First", this.badge()),
+        new ListGroupItem("First", this.badge),
         new ListGroupItem("Second"),
         new ListGroupItem("Third")
     ];
     public listGroupLinked = [
-        new ListGroupItem("First", this.badge(), "#", true),
+        new ListGroupItem("First", this.badge, "#", true),
         new ListGroupItem("Second", null, "#"),
         new ListGroupItem("Last", null, "#")
     ];
+
+    public alignmentFirst = new MediaAlignment();
+    public alignmentSecond = new MediaAlignment("right", "bottom");
 }

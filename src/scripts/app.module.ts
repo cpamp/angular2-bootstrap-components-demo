@@ -15,6 +15,7 @@ import {JumbotronBComponent} from 'ng-bcomponents';
 import {LabelBComponent} from 'ng-bcomponents';
 import {LinkBComponent} from 'ng-bcomponents';
 import {ListGroupBComponent} from 'ng-bcomponents';
+import {MediaBComponent} from 'ng-bcomponents';
 import {PanelBComponent} from 'ng-bcomponents';
 import {ProgressbarBComponent} from 'ng-bcomponents';
 import {TableBComponent} from 'ng-bcomponents';
@@ -35,6 +36,7 @@ import {WellBComponent} from 'ng-bcomponents';
         LabelBComponent,
         LinkBComponent,
         ListGroupBComponent,
+        MediaBComponent,
         PanelBComponent,
         ProgressbarBComponent,
         TableBComponent,

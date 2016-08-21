@@ -18,11 +18,13 @@
         <li><strong>L</strong></li>
         <li><link-bcomponent [text]="'Label'" [link]="'#label'"></link-bcomponent></li>
         <li><link-bcomponent [text]="'Link'" [link]="'#link'"></link-bcomponent></li>
+        <li><strong>M</strong></li>
+        <li><link-bcomponent [text]="'Media'" [link]="'#media'"></link-bcomponent></li>
         <li><strong>P</strong></li>
         <li><link-bcomponent [text]="'Panel'" [link]="'#panel'"></link-bcomponent></li>
-        <li><link-bcomponent [text]="'Progress Bar'" [link]="'#progressbar'"></link-bcomponent>
+        <li><link-bcomponent [text]="'Progress Bar'" [link]="'#progressbar'"></link-bcomponent></li>
         <li><strong>T</strong></li>
-        <li><link-bcomponent [text]="'Thumbnail'" [link]="'#thumbnail'"></link-bcomponent>
+        <li><link-bcomponent [text]="'Thumbnail'" [link]="'#thumbnail'"></link-bcomponent></li>
         <li><strong>W</strong></li>
         <li><link-bcomponent [text]="'Well'" [link]="'#well'"></link-bcomponent>
     </ul>
@@ -59,8 +61,8 @@
     <!--Input Group-->
     <heading-bcomponent [id]="'input-group'" [size]="3" [title]="'Input Group'"></heading-bcomponent>
     <p>Important Information (model): {{txtDemo.model}}</p>
-    <input-group-bcomponent #txtDemo [placeholder]="'Wow Amazing (small)Placeholder'" [model]="txtModel" [size]="'sm'" [frontText]="'@'" [backText]="'Go'" [backClick]="btnBackDemo" [backType]="'success'"></input-group-bcomponent><br/>
-    <input-group-bcomponent [placeholder]="'Wow, another(large) one!'" [model]="txtDemo.model" [size]="'lg'" [frontText]="'Go'" [backText]="'.00'" [frontClick]="btnFrontDemo" [backType]="'default'"></input-group-bcomponent><br/>
+    <input-group-bcomponent #txtDemo [placeholder]="'Wow Amazing (small)Placeholder'" [model]="txtModel" [size]="'sm'" [frontText]="'@'" [backButton]="btnBack"></input-group-bcomponent><br/>
+    <input-group-bcomponent [placeholder]="'Wow, another(large) one!'" [model]="txtDemo.model" [size]="'lg'" [backText]="'.00'" [frontButton]="btnFront"></input-group-bcomponent><br/>
     <input-group-bcomponent [placeholder]="'Wow, another one!'" [model]="txtDemo.model" [frontText]="'@'"></input-group-bcomponent><br/>
     <input-group-bcomponent [placeholder]="'Wow, another one!'" [model]="txtDemo.model" [backText]="'.00'"></input-group-bcomponent>
 
@@ -87,6 +89,11 @@
     <heading-bcomponent [id]="'list-group'" [size]="3" [title]="'List Group'"></heading-bcomponent>
     <list-group-bcomponent [items]="listGroup"></list-group-bcomponent>
     <list-group-bcomponent [items]="listGroupLinked" [linked]="true"></list-group-bcomponent>
+
+    <!-- Media -->
+    <heading-bcomponent [id]="'media'" [size]="3" [title]="'Media'"></heading-bcomponent>
+    <media-bcomponent [src]="" [alt]="'Lion'" [heading]="'Ferocious Lion. Left-Top'" [body]="'<b>WOW</b> So fierce, much ferocious</b>'" [alignment]="alignmentFirst"></media-bcomponent>
+    <media-bcomponent [src]="" [alt]="'Bear'" [heading]="'Ferocious Bear. Right-Bottom'" [body]="'<b>WOW</b> So fierce, much ferocious</b><br/>So<br/>Far<br/>Down<br/>Bottom<br/>Right'" [alignment]="alignmentSecond"></media-bcomponent>
 
     <!--Panel-->
     <heading-bcomponent [id]="'panel'" [size]="3" [title]="'Panel'"></heading-bcomponent>
