@@ -1,5 +1,10 @@
 <div class="container" style="margin-bottom: 15px">
-    <heading-bcomponent [title]="'Contents'" [size]="4"></heading-bcomponent>
+    <heading-bcomponent [title]="'ng-bcomponents Demo'" [size]="1"></heading-bcomponent>
+    <p>Visit the ng-bcomponents github repo and npm package pages:</p>
+    <link-bcomponent [link]="'https://github.com/cpamp21/ng-bcomponents'" [text]="'ng-bcomponents github'"></link-bcomponent>
+    <br/>
+    <link-bcomponent [link]="'https://www.npmjs.com/package/ng-bcomponents'" [text]="'ng-bcomponents npm'"></link-bcomponent>
+    <heading-bcomponent [title]="'Contents'" [size]="2"></heading-bcomponent>
     <ul style="list-style: none;">
         <li><strong>A</strong></li>
         <li><link-bcomponent [text]="'Alert'" [link]="'#alert'"></link-bcomponent></li>
@@ -28,6 +33,8 @@
         <li><strong>W</strong></li>
         <li><link-bcomponent [text]="'Well'" [link]="'#well'"></link-bcomponent>
     </ul>
+
+    <heading-bcomponent [size]="2" [title]="'BComponents'"></heading-bcomponent>
 
     <!--Alert-->
     <heading-bcomponent [id]="'alert'" [size]="3" [title]="'Alert'"></heading-bcomponent>

@@ -34,16 +34,12 @@ var paths = {
 var out = {
     index: 'index.html',
     scripts: {
-        concat: 'app.js',
         minified: 'app.min.js',
         angular: 'angular.min.js'
     },
-    angular: 'angular.js',
-    rxjs: 'rxjs.js',
-    webapi: 'webapi.js',
     dependencies: 'vendors.min.js',
     dependencyStyles: 'vendors.min.css',
-    stylesheets: 'stylesheets.css'
+    stylesheets: 'stylesheets.min.css'
 }
 
 var files = {
