@@ -166,7 +166,7 @@ gulp.task('images:dist', imagesDist);
  */
 function transpile(dest) {
     return gulp.src(files.src.typescripts)
-        .pipe(embed())
+        .pipe(embed({minimize: {quotes: true}}))
         .pipe(ts(tsConfig.compilerOptions))
         .pipe(gulp.dest(dest));
 }

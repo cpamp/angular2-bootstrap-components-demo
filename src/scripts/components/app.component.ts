@@ -12,6 +12,13 @@ import {ButtonBComponent} from 'ng-bcomponents';
     templateUrl: 'app.component.html'
 })
 export class AppComponent {
+    public imgGithub = `<img src="../images/github-circle.svg" alt="github"/>`;
+    public imgDownload = `<img src="../images/download.svg" alt="download"/>`;
+
+    public toggleMenu = () => {
+        $("#wrapper").toggleClass("toggled");
+    }
+
     public breadcrumbItems: LinkBComponent[] = [
         new LinkBComponent().Initialize("Home","#home"),
         new LinkBComponent().Initialize("BComponents", "#bcomponents")
