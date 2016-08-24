@@ -21,6 +21,7 @@ import {ProgressbarBComponent} from 'ng-bcomponents';
 import {TableBComponent} from 'ng-bcomponents';
 import {ThumbnailBComponent} from 'ng-bcomponents';
 import {WellBComponent} from 'ng-bcomponents';
+import {MainComponent} from './components/main.component';
 
 @NgModule({
     declarations: [
@@ -41,8 +42,10 @@ import {WellBComponent} from 'ng-bcomponents';
         ProgressbarBComponent,
         TableBComponent,
         ThumbnailBComponent,
-        WellBComponent
+        WellBComponent,
+        MainComponent
     ],
+    entryComponents: [MainComponent],
     imports: [BrowserModule, FormsModule],
     bootstrap: [AppComponent]
 })
