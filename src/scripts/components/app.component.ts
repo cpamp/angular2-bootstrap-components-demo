@@ -16,6 +16,7 @@ export class AppComponent {
         new LinkBComponent().Initialize("Badge", "#badge"),
         new LinkBComponent().Initialize("Breadcrumb", "#breadcrumb"),
         new LinkBComponent().Initialize("Button", "#button"),
+        new LinkBComponent().Initialize("Button Group", "#button-group"),
         new LinkBComponent().Initialize("Dropdown", "#dropdown"),
         new LinkBComponent().Initialize("Heading", "#heading"),
         new LinkBComponent().Initialize("Input Group", "#input-group"),
