@@ -42,6 +42,11 @@
     <!--Button-->
     <heading-bcomponent id="button" [size]="3" title="Button"></heading-bcomponent>
     <button-bcomponent text="Click me baby" [click]="btnClickDemo" type="primary"></button-bcomponent>
+    <button-bcomponent #btnRef [bcomponent]="btnDemoRef"></button-bcomponent>
+
+    <!-- Button Group -->
+    <heading-bcomponent id="button-group" [size]="3" title="Button Group"></heading-bcomponent>
+    <button-group-bcomponent [items]="btnGroupItems" size="xs"></button-group-bcomponent>
 
     <!--Dropdown -->
     <heading-bcomponent id="dropdown" [size]="3" title="Dropdown"></heading-bcomponent>

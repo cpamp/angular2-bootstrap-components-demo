@@ -7,6 +7,7 @@ import {AppComponent} from './components/app.component';
 import {AlertBComponent} from 'ng-bcomponents';
 import {BadgeBComponent} from 'ng-bcomponents';
 import {ButtonBComponent} from 'ng-bcomponents';
+import {ButtonGroupBComponent} from 'ng-bcomponents';
 import {BreadcrumbBComponent} from 'ng-bcomponents';
 import {DropdownBComponent} from 'ng-bcomponents';
 import {HeadingBComponent} from 'ng-bcomponents';
@@ -29,6 +30,7 @@ import {MainComponent} from './components/main.component';
         AlertBComponent,
         BadgeBComponent,
         ButtonBComponent,
+        ButtonGroupBComponent,
         BreadcrumbBComponent,
         DropdownBComponent,
         HeadingBComponent,

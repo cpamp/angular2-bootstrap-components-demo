@@ -1,5 +1,5 @@
 // <reference path="../../node_modules/angular2-bootstrap-components/bcomponents.d.ts" />
-import {Component, Type} from '@angular/core';
+import {Component, Type, ViewContainerRef, ViewChild} from '@angular/core';
 import {DropdownItem} from 'ng-bcomponents';
 import {ListGroupItem} from 'ng-bcomponents';
 import {BadgeBComponent} from 'ng-bcomponents';
@@ -28,6 +28,11 @@ export class MainComponent extends Type {
         alert("One more time!");
     }
 
+    @ViewChild('btnRef') btnRef: ButtonBComponent;
+    public btnDemoRef = new ButtonBComponent().Initialize("Click it!", "warning", () => {
+        this.btnRef.text = "You clicked it!";
+    }).InitializeAttributes("button-ref");
+
     public txtModel: string = "";
     public btnFrontDemo = () => {
         alert("Front!");
@@ -37,6 +42,8 @@ export class MainComponent extends Type {
     }
     public btnFront = new ButtonBComponent().Initialize("FrontGo", "success", this.btnFrontDemo);
     public btnBack = new ButtonBComponent().Initialize("BackGo", "danger", this.btnBackDemo);
+
+    public btnGroupItems = [this.btnFront, this.btnDemoRef, this.btnBack];
 
     public dropdownItems = [
         new DropdownItem("default", "First", "#dropdown"),
