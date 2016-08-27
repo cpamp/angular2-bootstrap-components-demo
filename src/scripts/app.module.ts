@@ -17,6 +17,7 @@ import {LabelBComponent} from 'ng-bcomponents';
 import {LinkBComponent} from 'ng-bcomponents';
 import {ListGroupBComponent} from 'ng-bcomponents';
 import {MediaBComponent} from 'ng-bcomponents';
+import {ModalBComponent} from 'ng-bcomponents';
 import {PanelBComponent} from 'ng-bcomponents';
 import {ProgressbarBComponent} from 'ng-bcomponents';
 import {SidenavBComponent} from 'ng-bcomponents';
@@ -40,6 +41,7 @@ import {WellBComponent} from 'ng-bcomponents';
         LinkBComponent,
         ListGroupBComponent,
         MediaBComponent,
+        ModalBComponent,
         PanelBComponent,
         ProgressbarBComponent,
         SidenavBComponent,

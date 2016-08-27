@@ -102,6 +102,16 @@
         <media-bcomponent src="/../images/lion-small.jpg" alt="Lion" heading="Ferocious Lion. Left-Top" body="<b>WOW</b> So fierce, much ferocious</b>" [alignment]="alignmentFirst" link="#media"></media-bcomponent>
         <media-bcomponent src="/../images/bear-small.jpg" alt="Bear" heading="Ferocious Bear. Right-Bottom" body="<b>WOW</b> So fierce, much ferocious</b><br/>So<br/>Far<br/>Down<br/>Bottom<br/>Right" [alignment]="alignmentSecond"></media-bcomponent>
 
+        <!-- Modal -->
+        <heading-bcomponent id="modal" [size]="3" title="Modal"></heading-bcomponent>
+        <modal-bcomponent #modalDemo title="My Modal">
+            <modal-body><b>My modal body</b></modal-body>
+            <modal-footer>
+                <button-bcomponent text="Close" [click]="modalDemo.close"></button-bcomponent>
+            </modal-footer>
+        </modal-bcomponent>
+        <button-bcomponent text="Open" [click]="modalDemo.open"></button-bcomponent>
+
         <!--Panel-->
         <heading-bcomponent id="panel" [size]="3" title="Panel"></heading-bcomponent>
         <panel-bcomponent header="<h3>Title</h3>" body="Wow crazy amazing text in body. So cool." footer="Micky 4 prez" type="warning"></panel-bcomponent>
