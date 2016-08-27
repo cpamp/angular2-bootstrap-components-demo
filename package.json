@@ -11,6 +11,8 @@
     "server:dist": "lite-server -c bs-config.dist.js",
     "build:dev": "gulp build:dev",
     "build:dist": "gulp build:dist",
+    "compile:dev": "gulp index:dev",
+    "compile:dist": "gulp index:dist",
     "postinstall": "typings install"
   },
   "author": "",

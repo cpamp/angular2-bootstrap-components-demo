@@ -94,6 +94,8 @@ var tsConfig = require('./tsconfig.json');
 var Builder = require('systemjs-builder');
 /** End Dependencies */
 
+var tsProject = ts.createProject('tsconfig.json');
+
 function concatFiles(src, out, dest) {
     return gulp.src(src)
         .pipe(concat(out))
@@ -167,7 +169,7 @@ gulp.task('images:dist', imagesDist);
 function transpile(dest) {
     return gulp.src(files.src.typescripts)
         .pipe(embed({minimize: {quotes: true}}))
-        .pipe(ts(tsConfig.compilerOptions))
+        .pipe(ts(tsProject))
         .pipe(gulp.dest(dest));
 }
 
@@ -202,8 +204,8 @@ function uglifyJs(src, dest) {
 }
 
 function uglifyJsDist() { return uglifyJs(files.dev.scriptsBundled, paths.dist.scripts); }
-gulp.task('uglify:js:dist', ['tsc:dev'], uglifyJsDist);
-gulp.task('ugjs:dist', ['tsc:dev'], uglifyJsDist);
+gulp.task('uglify:js:dist', ['bundle:dev'], uglifyJsDist);
+gulp.task('ugjs:dist', ['bundle:dev'], uglifyJsDist);
 
 /**
  * Uglify CSS
@@ -243,7 +245,6 @@ gulp.task('index:dev', [
     'dependencies:css:dev',
     'bundle:dev',
     'fonts:dev',
-    'tsc:dev',
     'uglify:css:dev'
 ], indexDev);
 
@@ -251,9 +252,7 @@ function indexDist() { return buildIndex(paths.dist.root); }
 gulp.task('index:dist', [
     'dependencies:dist',
     'dependencies:css:dist',
-    'bundle:dev',
     'fonts:dist',
-    'tsc:dev',
     'uglify:js:dist',
     'uglify:css:dist'
 ], indexDist);
@@ -262,25 +261,11 @@ gulp.task('index:dist', [
  * Builds
  */
 gulp.task('build:dev', [
-    'dependencies:dev',
-    'dependencies:css:dev',
-    'bundle:dev',
-    'fonts:dev',
     'images:dev',
-    'tsc:dev',
-    'bundle:dev',
-    'uglify:css:dev',
     'index:dev'
 ]);
 
 gulp.task('build:dist', [
-    'dependencies:dist',
-    'dependencies:css:dist',
-    'bundle:dev',
-    'fonts:dist',
     'images:dist',
-    'tsc:dev',
-    'uglify:js:dist',
-    'uglify:css:dist',
     'index:dist'
 ]);
