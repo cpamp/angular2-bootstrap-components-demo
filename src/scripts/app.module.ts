@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 
-
+import {BComponent} from 'ng-bcomponents';
 import {AppComponent} from './components/app.component';
 import {AlertBComponent} from 'ng-bcomponents';
 import {BadgeBComponent} from 'ng-bcomponents';
@@ -19,10 +19,10 @@ import {ListGroupBComponent} from 'ng-bcomponents';
 import {MediaBComponent} from 'ng-bcomponents';
 import {PanelBComponent} from 'ng-bcomponents';
 import {ProgressbarBComponent} from 'ng-bcomponents';
+import {SidenavBComponent} from 'ng-bcomponents';
 import {TableBComponent} from 'ng-bcomponents';
 import {ThumbnailBComponent} from 'ng-bcomponents';
 import {WellBComponent} from 'ng-bcomponents';
-import {MainComponent} from './components/main.component';
 
 @NgModule({
     declarations: [
@@ -42,13 +42,17 @@ import {MainComponent} from './components/main.component';
         MediaBComponent,
         PanelBComponent,
         ProgressbarBComponent,
+        SidenavBComponent,
         TableBComponent,
         ThumbnailBComponent,
-        WellBComponent,
-        MainComponent
+        WellBComponent
     ],
-    entryComponents: [MainComponent],
     imports: [BrowserModule, FormsModule],
     bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+    constructor() {
+        // Uncomment the following line to disable auto identifiers
+        // BComponent.disableAutoIdentifier();
+    }
+}
