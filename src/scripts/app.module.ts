@@ -6,6 +6,7 @@ import {BComponent} from 'ng-bcomponents';
 import {AppComponent} from './components/app.component';
 import {AlertBComponent} from 'ng-bcomponents';
 import {BadgeBComponent} from 'ng-bcomponents';
+import {BlockquoteBComponent} from 'ng-bcomponents';
 import {ButtonBComponent} from 'ng-bcomponents';
 import {ButtonGroupBComponent} from 'ng-bcomponents';
 import {BreadcrumbBComponent} from 'ng-bcomponents';
@@ -30,6 +31,7 @@ import {WellBComponent} from 'ng-bcomponents';
         AppComponent,
         AlertBComponent,
         BadgeBComponent,
+        BlockquoteBComponent,
         ButtonBComponent,
         ButtonGroupBComponent,
         BreadcrumbBComponent,

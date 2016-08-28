@@ -17,6 +17,7 @@ export class AppComponent extends Type {
     public navItems = [
         new SidenavItem(new LinkBComponent().Initialize("Alert", "#alert")),
         new SidenavItem(new LinkBComponent().Initialize("Badge", "#badge")),
+        new SidenavItem(new LinkBComponent().Initialize("Blockquote", "#blockquote")),
         new SidenavItem(null, [
             new SidenavDropdownItem(null, 'Breadcrumb'),
             new SidenavDropdownItem(new LinkBComponent().Initialize("Breadcrumb", "#breadcrumb"))

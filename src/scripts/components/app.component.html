@@ -1,4 +1,4 @@
-<sidenav-bcomponent [brand]="brand" [items]="navItems">
+<sidenav-bcomponent [brand]="brand" [items]="navItems" [overlay]="false">
     <div class="container col-md-1 col-sm-1">
         <button type="button" class="btn btn-default" id="menu-toggle" (click)="toggleMenu()" style="background-image:none;border:none;margin:10px;">
             <svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -38,6 +38,17 @@
         <div><badge-bcomponent #badge [value]="3"></badge-bcomponent></div>
         <button-bcomponent text="-" [click]="badge.decrement" type="danger"></button-bcomponent>&nbsp;
         <button-bcomponent text="+" [click]="badge.increment" type="success"></button-bcomponent>
+
+        <!--Blockquote-->
+        <heading-bcomponent id="blockquote" [size]="3" title="Blockquote"></heading-bcomponent>
+        <blockquote-bcomponent>
+            <blockquote-body>"Whether you think you can or you think can't, you're right."</blockquote-body>
+            <blockquote-footer>Henry Ford</blockquote-footer>
+        </blockquote-bcomponent>
+        <blockquote-bcomponent [reverse]="true">
+            <blockquote-body>"Whether you think you can or you think can't, you're right."</blockquote-body>
+            <blockquote-footer>Henry Ford</blockquote-footer>
+        </blockquote-bcomponent>
 
         <!--Breadcrumb-->
         <heading-bcomponent id="breadcrumb" [size]="3" title="Breadcrumb"></heading-bcomponent>

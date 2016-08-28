@@ -1,0 +1,3 @@
+.sidebar-nav li:not(:first-child):before {
+  background-color: #00a3cc !important;
+}
