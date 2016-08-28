@@ -20,7 +20,7 @@ import {MediaBComponent} from 'ng-bcomponents';
 import {ModalBComponent} from 'ng-bcomponents';
 import {PanelBComponent} from 'ng-bcomponents';
 import {ProgressbarBComponent} from 'ng-bcomponents';
-import {SidenavBComponent} from 'ng-bcomponents';
+import {SidenavBComponent, SidenavDropdownItem, SidenavItem} from 'ng-bcomponents';
 import {TableBComponent} from 'ng-bcomponents';
 import {ThumbnailBComponent} from 'ng-bcomponents';
 import {WellBComponent} from 'ng-bcomponents';

@@ -1,4 +1,3 @@
-// <reference path="../../node_modules/angular2-bootstrap-components/bcomponents.d.ts" />
 import {Component, Type, ViewContainerRef, ViewChild} from '@angular/core';
 import {DropdownItem} from 'ng-bcomponents';
 import {ListGroupItem} from 'ng-bcomponents';
@@ -6,7 +5,7 @@ import {BadgeBComponent} from 'ng-bcomponents';
 import {MediaAlignment} from 'ng-bcomponents';
 import {LinkBComponent} from 'ng-bcomponents';
 import {ButtonBComponent} from 'ng-bcomponents';
-import {SidenavBComponent} from 'ng-bcomponents';
+import {SidenavDropdownItem, SidenavItem} from 'ng-bcomponents';
 import {LabelBComponent} from 'ng-bcomponents';
 
 @Component({
@@ -16,28 +15,28 @@ import {LabelBComponent} from 'ng-bcomponents';
 export class AppComponent extends Type {
     public brand = new LinkBComponent().Initialize("ng-bcomponents", "#");
     public navItems = [
-        new LinkBComponent().Initialize("Alert", "#alert"),
-        new LinkBComponent().Initialize("Badge", "#badge"),
-        new LinkBComponent().Initialize("Breadcrumb", "#breadcrumb"),
-        new LinkBComponent().Initialize("Button", "#button"),
-        new LinkBComponent().Initialize("Button Group", "#button-group"),
-        new LinkBComponent().Initialize("Dropdown", "#dropdown"),
-        new LinkBComponent().Initialize("Heading", "#heading"),
-        new LinkBComponent().Initialize("Input Group", "#input-group"),
-        new LinkBComponent().Initialize("Jumbotron", "#jumbotron"),
-        new LinkBComponent().Initialize("Label", "#label"),
-        new LinkBComponent().Initialize("Link", "#link"),
-        new LinkBComponent().Initialize("List Group", "#list-group"),
-        new LinkBComponent().Initialize("Media", "#media"),
-        new LinkBComponent().Initialize("Panel", "#panel"),
-        new LinkBComponent().Initialize("Progress Bar", "#progressbar"),
-        new LinkBComponent().Initialize("Table", "#table"),
-        new LinkBComponent().Initialize("Thumbnail", "#thumbnail"),
-        new LinkBComponent().Initialize("Well", "#well")
+        new SidenavItem(new LinkBComponent().Initialize("Alert", "#alert")),
+        new SidenavItem(new LinkBComponent().Initialize("Badge", "#badge")),
+        new SidenavItem(null, [
+            new SidenavDropdownItem(null, 'Breadcrumb'),
+            new SidenavDropdownItem(new LinkBComponent().Initialize("Breadcrumb", "#breadcrumb"))
+        ], "Breadcrumb"),
+        new SidenavItem(new LinkBComponent().Initialize("Button", "#button")),
+        new SidenavItem(new LinkBComponent().Initialize("Button Group", "#button-group")),
+        new SidenavItem(new LinkBComponent().Initialize("Dropdown", "#dropdown")),
+        new SidenavItem(new LinkBComponent().Initialize("Heading", "#heading")),
+        new SidenavItem(new LinkBComponent().Initialize("Input Group", "#input-group")),
+        new SidenavItem(new LinkBComponent().Initialize("Jumbotron", "#jumbotron")),
+        new SidenavItem(new LinkBComponent().Initialize("Label", "#label")),
+        new SidenavItem(new LinkBComponent().Initialize("Link", "#link")),
+        new SidenavItem(new LinkBComponent().Initialize("List Group", "#list-group")),
+        new SidenavItem(new LinkBComponent().Initialize("Media", "#media")),
+        new SidenavItem(new LinkBComponent().Initialize("Panel", "#panel")),
+        new SidenavItem(new LinkBComponent().Initialize("Progress Bar", "#progressbar")),
+        new SidenavItem(new LinkBComponent().Initialize("Table", "#table")),
+        new SidenavItem(new LinkBComponent().Initialize("Thumbnail", "#thumbnail")),
+        new SidenavItem(new LinkBComponent().Initialize("Well", "#well"))
     ];
-
-    public imgGithub = `<img src="../images/github-circle.svg" alt="github"/>`;
-    public imgDownload = `<img src="../images/download.svg" alt="download"/>`;
 
     public toggleMenu = () => {
         $("#wrapper").toggleClass("toggled");
