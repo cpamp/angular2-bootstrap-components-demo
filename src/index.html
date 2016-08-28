@@ -17,7 +17,30 @@
 <body>
 
     <app-component>
-            Preparing to blow your mind
+        <style>
+            html, body, .container {
+                height: 100%;
+                background-color: #000;
+                color: #fff;
+            }
+            .container {
+                display: table;
+                vertical-align: middle;
+            }
+            .vertical-center-row {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        </style>
+
+        <div class="container">
+            <div class="vertical-center-row">
+                <div align="center">
+                    <h1>Loading ng-bcomponents demo</h1>
+                    <small>prepare to have your mind blown</small>
+                </div>
+            </div>
+        </div>
     </app-component>
  
 </body>
